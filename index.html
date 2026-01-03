@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoilGupta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(1, 0, 40);
+            color: rgb(214, 214, 214);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+            padding: 20px;
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(243, 243, 244);
+        }
+
+        nav ul li a:hover {
+            color: rgb(117, 117, 117);
+            font-size: 1.01rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 50px;
+            align-items: center;
+        }
+
+        .firstSection>div {
+            font-size: 3rem;
+
+        }
+
+        .leftSection {
+            font-size: 3rem;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background-color: rgb(6 4 94);
+            border: 2px solid white;
+            border-radius: 6px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .purple {
+            color: rgb(136, 5, 236);
+        }
+
+        #element {
+            color: rgb(136, 5, 236);
+
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 40vh;
+        }
+
+        .secondSection h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        .inline-fit {
+            display: inline-block;
+            width: fit-content;
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(117, 117, 117);
+            height: 1.2px;
+            margin: 40px 80px
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        .footer {
+            display: flex;
+            background-color: rgb(8, 0, 24);
+            height: 200px;
+            margin: auto;
+            border-top: 1.2px solid rgb(117, 117, 117);
+            padding: 20px 80px;
+        }
+
+        .about-box {
+            max-width: auto;
+            margin: auto;
+            font-size: 1.4rem;
+            border-radius: 14px;
+            box-shadow: inset -1px -1px 30px rgb(226 226 226 / 8%);
+            line-height: 1.6;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                Noil's Portfolio
+            </div>
+            <div class="right">
+                <ul>
+                    <a href="">
+                        <li>Home
+                    </a></li>
+                    <a href="">
+                        <li>About
+                    </a></li>
+                    <a href="">
+                        <li>Skills
+                    </a></li>
+                    <a href="">
+                        <li>Projects
+                    </a></li>
+                    <a href="">
+                        <li>Contact
+                    </a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple"><b>Noil Gupta.</b></span>
+                <div>
+                    I am an aspiring
+                </div>
+                <div>
+                    <span id="element"></span>
+                </div>
+                <div class="buttons"> 
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit Github</button>
+                </div>
+            </div>   
+            <div class="rightSection">
+                <img src="Developer.png" alt="My Image" height="550px" width="550px">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <div class="inline-fit">
+                <h1>About me</h1>
+            </div>
+            <div>
+                <p class="about-box">
+                    I am a software developer currently pursuing Electrical Engineering at HBTU Kanpur, with a strong
+                    interest in artificial intelligence and machine learning. I build hands-on projects focused on
+                    applying
+                    ML models and AI techniques to real-world problems, often integrating software solutions with
+                    hardware-level understanding.
+
+                    I actively seek AI/ML internship opportunities where I can contribute to data-driven projects,
+                    strengthen my applied machine learning skills, and work in a collaborative engineering environment.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                Noil's Portfolio &copy; 2026
+            </div>
+            <div class="footer-second"></div>
+            <div class="footer-third"></div>
+            <div class="footer-fourth"></div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['<b>Web Developer</b>', '<b>Python Developer</b>', '<b>Competitive Programmer</b>', '<b>Tech Enthusiast</b>'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
