@@ -59,19 +59,17 @@
         @media (max-width: 768px) {
             .firstSection {
                 flex-direction: column;
+                align-items: center;
                 text-align: center;
-                padding: 3rem 1.5rem;
+                padding: 2.5rem 1.2rem;
+                gap: 1.5rem;
             }
 
-            .rightSection img {
-                max-width: 280px;
-            }
-
-            nav ul {
-                display: none;
-                /* optional till hamburger menu */
+            .leftSection {
+                font-size: 1rem;
             }
         }
+
 
 
         .firstSection {
@@ -116,7 +114,6 @@
 
         #element {
             color: rgb(136, 5, 236);
-
         }
 
         .firstSection h1,
@@ -124,8 +121,31 @@
             font-size: clamp(1.5rem, 4vw, 3rem);
         }
 
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
 
-        .secondSection {
+        @media (max-width: 768px) {
+            .button {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .leftSection .btn {
+                width: 100%;
+                max-width: 260px;
+                margin: auto;
+                font-size: 1rem;
+                padding: 10px;
+            }
+        }
+
+        .btn{
+            text-decoration: none;
+        }
+                .secondSection {
             max-width: 80vw;
             margin: auto;
             height: 40vh;
@@ -155,7 +175,6 @@
         .footer {
             display: flex;
             background-color: rgb(8, 0, 24);
-            height: 200px;
             margin: auto;
             border-top: 1.2px solid rgb(117, 117, 117);
             padding: 20px 80px;
@@ -163,12 +182,24 @@
 
         .about-box {
             max-width: 900px;
-            margin: 2rem auto;
+            margin: auto 2rem;
             padding: 2rem;
             font-size: 1.1rem;
             border-radius: 14px;
             box-shadow: inset -1px -1px 30px rgb(226 226 226 / 8%);
             line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .secondSection {
+                height: auto;
+                padding: 2rem 1.2rem;
+            }
+
+            .about-box {
+                font-size: 1rem;
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -201,8 +232,9 @@
                     <span id="element"></span>
                 </div>
                 <div class="buttons">
-                    <button class="btn">Download Resume</button>
-                    <button class="btn">Visit Github</button>
+                    <a href="resume.pdf" download="Noil_Gupta_Resume.pdf" class="btn">
+                        Download Resume</a>
+                    <a href="https://github.com/NoilGupta" class="btn">Visit Github</a>
                 </div>
             </div>
             <div class="rightSection">
