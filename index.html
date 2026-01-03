@@ -15,6 +15,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+
         }
 
         body {
@@ -25,11 +26,10 @@
 
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             height: 60px;
-            padding: 20px;
-
+            padding: 0 1.5rem;
         }
 
         nav ul {
@@ -56,20 +56,42 @@
             font-size: 1.5rem;
         }
 
+        @media (max-width: 768px) {
+            .firstSection {
+                flex-direction: column;
+                text-align: center;
+                padding: 3rem 1.5rem;
+            }
+
+            .rightSection img {
+                max-width: 280px;
+            }
+
+            nav ul {
+                display: none;
+                /* optional till hamburger menu */
+            }
+        }
+
+
         .firstSection {
             display: flex;
-            justify-content: space-around;
-            margin: 50px 50px;
+            justify-content: space-between;
             align-items: center;
+            padding: 4rem 8%;
+            gap: 2rem;
         }
 
         .firstSection>div {
-            font-size: 3rem;
+
+            font-size: 300%;
 
         }
 
         .leftSection {
-            font-size: 3rem;
+            font-size: 1.2rem;
+            max-width: 600px;
+
         }
 
         .leftSection .btn {
@@ -83,7 +105,9 @@
         }
 
         .rightSection img {
-            width: 80%;
+            width: 100%;
+            max-width: 420px;
+            height: auto;
         }
 
         .purple {
@@ -94,6 +118,12 @@
             color: rgb(136, 5, 236);
 
         }
+
+        .firstSection h1,
+        .firstSection div {
+            font-size: clamp(1.5rem, 4vw, 3rem);
+        }
+
 
         .secondSection {
             max-width: 80vw;
@@ -132,13 +162,13 @@
         }
 
         .about-box {
-            max-width: auto;
-            margin: auto;
-            font-size: 1.4rem;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            font-size: 1.1rem;
             border-radius: 14px;
             box-shadow: inset -1px -1px 30px rgb(226 226 226 / 8%);
-            line-height: 1.6;
-            text-align: left;
+            line-height: 1.7;
         }
     </style>
 </head>
@@ -151,22 +181,11 @@
             </div>
             <div class="right">
                 <ul>
-                    <a href="">
-                        <li>Home
-                    </a></li>
-                    <a href="">
-                        <li>About
-                    </a></li>
-                    <a href="">
-                        <li>Skills
-                    </a></li>
-                    <a href="">
-                        <li>Projects
-                    </a></li>
-                    <a href="">
-                        <li>Contact
-                    </a></li>
-
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -181,13 +200,14 @@
                 <div>
                     <span id="element"></span>
                 </div>
-                <div class="buttons"> 
+                <div class="buttons">
                     <button class="btn">Download Resume</button>
                     <button class="btn">Visit Github</button>
                 </div>
-            </div>   
+            </div>
             <div class="rightSection">
-                <img src="Developer.png" alt="My Image" height="550px" width="550px">
+                <img src="Developer.png" alt="My Image">
+
             </div>
         </section>
         <hr>
